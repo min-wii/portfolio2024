@@ -10,6 +10,10 @@ body {
   font-family: "Freesentation-4Regular";
 }
 
+img {
+  width: 100%;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -65,6 +69,9 @@ main .container .vcf .vcf__inner figure img {
 }
 main .container .vcf .vcf__inner .vcf__desc {
   width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 main .container .vcf .vcf__inner .vcf__desc .title {
   position: relative;
@@ -78,4 +85,34 @@ main .container .vcf .vcf__inner .vcf__desc .title::after {
   top: 0;
   right: 0;
   font-size: 1rem;
+}
+main .container .vcf .vcf__inner .vcf__desc p:nth-of-type(1) {
+  margin-top: -2rem;
+  text-align: right;
+}
+main .container .vcf .vcf__inner .vcf__desc p:nth-of-type(2) {
+  text-transform: uppercase;
+}
+main .container .vcf .vcf__inner .vcf__desc table tr {
+  border: 1px solid #777;
+  text-align: left;
+}
+main .container .vcf .vcf__inner .vcf__desc table tr td[colspan="2"] {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main .container .vcf .vcf__inner .vcf__desc table tr td[colspan="2"] a {
+  text-transform: none;
+  color: #111;
+}
+main .container .vcf .vcf__inner .vcf__desc table tr td[colspan="2"] span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background: url("/assets/img/ico_mail.png") center 100% no-repeat;
+}
+main .container .vcf .vcf__inner .vcf__desc table tr th, main .container .vcf .vcf__inner .vcf__desc table tr td {
+  padding: 0.1rem 0.5rem;
+  text-transform: uppercase;
 }
