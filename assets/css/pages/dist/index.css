@@ -30,12 +30,13 @@ main {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  min-height: 108rem;
 }
 main .container {
   position: relative;
   top: 5rem;
   width: 80%;
-  min-height: 108rem;
+  height: 100%;
   border: 1px solid red;
 }
 main .container:hover .overlay {
