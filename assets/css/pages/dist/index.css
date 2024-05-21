@@ -350,7 +350,7 @@ main .container .work .work__inner .work__list > li .company[data-company=mtis] 
   width: 15rem;
   height: 8rem;
   background: #fff;
-  mix-blend-mode: darken;
+  mix-blend-mode: multiply;
   order: 2;
 }
 main .container .work .work__inner .work__list > li .company img {
