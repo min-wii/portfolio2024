@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTFOLIO</title>
-<link rel="stylesheet" href="/assets/css/dist/main.css">
+    <link rel="stylesheet" href="/assets/css/dist/main.css">
 </head>
 
 <body>
@@ -14,24 +14,24 @@
     </header>
     <main>
         <div class="container">
-            <div class="vcf">
+            <div id="profile" class="vcf">
                 <div class="vcf__inner">
                     <figure class="vcf__selfi">
-                        <img src="/assets/img/profile.jpg" alt="">
-                        <figcaption>소통하고 있는 민주 킴의 모습(위)</figcaption>
+                        <img src="/assets/img/profile.gif" alt="">
+                        <figcaption>Min-ju Kim interacting with people (above)</figcaption>
                     </figure>
                     <div class="vcf__desc">
                         <h2 class="title">MINJOO KIM</h2>
                         <p>as a publisher</p>
-
-                        <p>with the passionate about UI/UX design and coding, I always try to learn more, work more, grow up
+                        <p>with the passionate about UI/UX design and coding, I always try to learn more, work more,
+                            grow up
                             and improve myself</p>
                         <table>
                             <thead>
                                 <tr>
-                                    <th scope="col" data-cell="gender">Gender</th>
-                                    <th scope="col" data-cell="birth">Date of birth</th>
-                                    <th scope="col" data-cell="nation">Nationality</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Date of birth</th>
+                                    <th scope="col">Nationality</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,47 +41,69 @@
                                     <td>Korea</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2"><span></span><a href="mailto:zoominn90@gmail.com">zoominn90@gmail.com</a></td>
-                                    <td><img src="/assets/img/qrcode_band-tornado-851.notion.site.png" alt=""></td>
+                                    <td colspan="2"><a href="mailto:zoominn90@gmail.com">zoominn90@gmail.com</a></td>
+                                    <td data-cell="cell-qr"><img
+                                            src="/assets/img/qrcode_band-tornado-851.notion.site.png" alt=""></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="edu">
-    
-            </div>
-            <div class="work">
-                <p class="title">work experience</p>
-                <ul class="work__list">
-                    <li>
-                        <div class="company"></div>
-                        <div class="period"><time datetime=""></time>
-                            <div class="period__desc">
-                                <p>what did I learn from here?</p>
-                                <ul>
-                                    <li>ways to work quickly</li>
-                                    <li>complete the project on time</li>
-                                </ul>
-                            </div>
+            <div id="project" class="ticket">
+                <div class="ticket__top">
+                        <div class="ticket__title">
+                            <p class="title">Projects Exhibition</p>
+                            <p>You're Invited!</p>
                         </div>
-                    </li>
-                    <li>
-                        <div class="company"></div>
-                        <div class="period"><time datetime=""></time>
-                            <div class="period__desc">
-                                <p>what did I learn from here?</p>
-                                <ul>
-                                    <li>work in team</li>
-                                    <li>how to build a website from scratch</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                        <ul class="ticket__desc">
+                            <li>Discover a collection of diverse projects and portfolios showcasing three years of dedication and creativity.</li>
+                            <li>Present this ticket for free entry to the event.</li>
+                        </ul>
+                        <span></span>
+                </div>
+                <div class="ticket__btm">
+                    <h3 class="title">PORTFOLIO</h3>
+                    <div class="ticket__period">
+                        <time datetime="2022">2022</time><br><time datetime="2024">2024</time>
+                    </div>
+                    <div class="ticket__code">
+                        <img src="/assets/img/barcode.png" alt="">
+                    </div>
+                </div>
             </div>
-            <div class="skill">
+            <div id="work" class="work">
+                <div class="work__inner">
+                    <p class="title">work experience</p>
+                    <ul class="work__list">
+                        <li>
+                            <figure class="company" data-company="fa"><img src="/assets/img/company-fa.png" alt=""></figure>
+                            <div class="period"><time datetime="2022-04">2022-04</time> - <time datetime="2024-02">2024-02</time>
+                                <div class="period__desc">
+                                    <p>what did I learn from here?</p>
+                                    <ul>
+                                        <li>ways to work quickly</li>
+                                        <li>complete the project on time</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <figure class="company" data-company="mtis"><img src="/assets/img/company-mtis.png" alt=""></figure>
+                            <div class="period"><time datetime="2024-02">2024-02</time> - <time datetime="2024">NOW</time>
+                                <div class="period__desc">
+                                    <p>what did I learn from here?</p>
+                                    <ul>
+                                        <li>work in team</li>
+                                        <li>how to build a website from scratch</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="skill" class="skill">
                 <div class="skill__inner">
                     <div class="skill__study">
                         <ul class="skill__study__list">
