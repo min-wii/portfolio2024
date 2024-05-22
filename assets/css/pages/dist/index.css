@@ -5,6 +5,7 @@ html {
 body {
   height: auto;
   width: 100vw;
+  height: 100vh;
   background: #111;
   color: #fff;
   font-family: "Freesentation-4Regular";
@@ -16,7 +17,7 @@ header {
   justify-content: center;
   align-items: center;
   border: 1px solid red;
-  height: 15%;
+  height: 10vh;
 }
 header .title {
   font-family: "WAGURITTF";
@@ -29,15 +30,14 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  min-height: 108rem;
+  height: auto;
 }
 main .container {
+  border: 1px solid blue;
   position: relative;
-  top: 5rem;
   width: 80%;
-  height: 100%;
-  border: 1px solid red;
+  height: auto;
+  min-height: 130rem;
 }
 main .container:hover .overlay {
   z-index: -100;
@@ -48,22 +48,34 @@ main .container .overlay {
   width: 100%;
   height: 100%;
   background: url("/assets/img/plastic-bag-texture.jpg");
+  opacity: 0.7;
   z-index: 100;
   mix-blend-mode: overlay;
 }
 main .container .vcf {
   position: absolute;
+  top: 5%;
   left: 50%;
-  transform: translateX(-17%);
-  width: 42.37%;
-  min-width: 50rem;
+  transform: translate(-40%, 0);
+  width: 35.86%;
+  min-width: 55rem;
+  max-width: 60rem;
+  height: auto;
   min-height: 20rem;
+  max-height: 30rem;
   color: #111;
   background: #fff;
   backdrop-filter: blur(4px);
   border-radius: 1.5rem;
   padding: 2rem 1.5rem;
   z-index: 10;
+  transition: all 0.5s linear;
+}
+main .container .vcf:active {
+  border: 1px solid red;
+  top: 50%;
+  left: 50%;
+  transform: scale(1.5) translate(-30%, -80%);
 }
 main .container .vcf .vcf__inner {
   width: 100%;
@@ -89,7 +101,7 @@ main .container .vcf .vcf__inner .vcf__desc {
 }
 main .container .vcf .vcf__inner .vcf__desc .title {
   position: relative;
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: "WAGURITTF";
   font-style: oblique;
 }
@@ -104,7 +116,7 @@ main .container .vcf .vcf__inner .vcf__desc p {
   font-size: 1.5rem;
 }
 main .container .vcf .vcf__inner .vcf__desc p:nth-of-type(1) {
-  margin-top: -3rem;
+  margin-top: -1rem;
   text-align: right;
 }
 main .container .vcf .vcf__inner .vcf__desc p:nth-of-type(2) {
@@ -158,23 +170,26 @@ main .container .vcf .vcf__inner .vcf__desc table tr td {
 }
 main .container .ticket {
   position: absolute;
-  top: 20%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-120%);
-  width: 21.18%;
-  min-width: 25rem;
-  height: 74%;
-  min-height: 65.55%;
-  max-height: 60rem;
+  transform: translate(-168%, -60%);
+  width: 18.22%;
+  min-width: 28rem;
+  max-width: 33rem;
+  height: 46.15%;
+  min-height: 60rem;
+  max-height: 70rem;
   background: #DFB62A;
   color: #111;
   font-size: 2rem;
+  transition: all 0.5s linear;
   cursor: pointer;
-  filter: blur(1px) grayscale(0.5);
-  transition: filter 0.5s ease;
 }
-main .container .ticket:hover {
-  filter: blur(0) grayscale(0);
+main .container .ticket:active {
+  top: 50%;
+  left: 50%;
+  transform: scaleX(1.8) scaleY(1.5) rotate(90deg) translate(-80%, 20%);
+  z-index: 10;
 }
 main .container .ticket .ticket__top {
   position: relative;
@@ -239,7 +254,7 @@ main .container .ticket .ticket__btm .title {
   top: 15%;
   left: 1%;
   width: 80%;
-  font-size: 5rem;
+  font-size: 4.2rem;
 }
 main .container .ticket .ticket__btm .ticket__period {
   position: absolute;
@@ -298,12 +313,15 @@ main .container .ticket::after {
 }
 main .container .work {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
-  transform: translate(-13%, 0);
-  width: 42.37%;
-  height: 70rem;
-  min-width: 50rem;
+  transform: translate(-33%, -43%);
+  width: 39.06%;
+  min-width: 60rem;
+  max-width: 65rem;
+  height: 50%;
+  min-height: 65rem;
+  max-height: 70rem;
   font-size: 1.5rem;
   color: #111;
   background: url("/assets/img/paper-texture-1.jpg");
@@ -311,6 +329,13 @@ main .container .work {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 0.5s linear;
+}
+main .container .work:active {
+  top: 50%;
+  left: 50%;
+  transform: scale(1.5) translate(-25%, -35%);
+  z-index: 10;
 }
 main .container .work .work__inner {
   position: relative;
@@ -332,13 +357,14 @@ main .container .work .work__inner .title {
 }
 main .container .work .work__inner .work__list {
   position: absolute;
-  top: 30%;
+  top: 18%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  font-size: 2rem;
 }
 main .container .work .work__inner .work__list > li {
   display: flex;
@@ -372,9 +398,177 @@ main .container .work .work__inner .work__list > li .company img {
 }
 main .container .work .work__inner .work__list > li .period {
   width: 70%;
+  font-family: "Giants-Bold";
 }
 main .container .work .work__inner .work__list > li .period time {
-  font-family: "Giants-Bold";
   font-size: 2rem;
   text-transform: uppercase;
+}
+main .container .work .work__inner .work__list > li .period time.now {
+  background: #ff7481;
+  font-style: oblique;
+  padding-right: 0.5rem;
+}
+main .container .work .work__inner .work__list > li .period .period__desc {
+  font-family: "Freesentation-5Medium";
+}
+main .container .skill {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 48.05%;
+  min-width: 72rem;
+  max-width: 75rem;
+  height: 22.3%;
+  min-height: 29rem;
+  max-height: 35rem;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s linear;
+}
+main .container .skill:active {
+  top: 50%;
+  left: 50%;
+  transform: scale(1.5) translate(-25%, -35%);
+  z-index: 10;
+}
+main .container .skill:active .skill__inner .skill__main ul li::before {
+  background: conic-gradient(transparent, #a8efff, transparent 30%);
+  animation: rotate 4s linear infinite;
+}
+main .container .skill:active .skill__inner .skill__main .title::before {
+  animation: color 4s linear infinite;
+}
+main .container .skill:active .skill__inner .skill__main .title::after {
+  color: #777;
+}
+main .container .skill .skill__inner {
+  width: 95%;
+  height: 85%;
+  border: 1px solid #999;
+  display: flex;
+}
+main .container .skill .skill__inner .skill__study {
+  width: 35%;
+  border: 1px solid #999;
+}
+main .container .skill .skill__inner .skill__main {
+  width: 65%;
+  border: 1px solid #999;
+  display: flex;
+  flex-direction: column;
+}
+main .container .skill .skill__inner .skill__main ul {
+  height: 50%;
+  border: 1px solid #999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main .container .skill .skill__inner .skill__main ul li {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+main .container .skill .skill__inner .skill__main ul li::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+}
+main .container .skill .skill__inner .skill__main ul li::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border-radius: 5px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  filter: drop-shadow(1px 1px 3px #fff);
+}
+main .container .skill .skill__inner .skill__main ul li:nth-of-type(1)::after {
+  content: "HTML";
+}
+main .container .skill .skill__inner .skill__main ul li:nth-of-type(2)::after {
+  content: "CSS";
+}
+main .container .skill .skill__inner .skill__main ul li:nth-of-type(3)::after {
+  content: "SCSS";
+}
+main .container .skill .skill__inner .skill__main ul li:nth-of-type(4)::after {
+  content: "JS";
+}
+main .container .skill .skill__inner .skill__main ul li:nth-of-type(5)::after {
+  content: "jQuery";
+}
+main .container .skill .skill__inner .skill__main ul li:nth-of-type(6)::after {
+  content: "Git";
+}
+main .container .skill .skill__inner .skill__main .title {
+  position: relative;
+  height: 50%;
+  font-family: "TTHakgyoansimMulgyeolB";
+  font-style: oblique;
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+main .container .skill .skill__inner .skill__main .title::before {
+  content: "Skills";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5.2rem;
+}
+main .container .skill .skill__inner .skill__main .title::after {
+  content: "Skills";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.9rem;
+  color: #fff;
+}
+main .container .skill .skill__inner .skill__main .title span {
+  position: absolute;
+  top: 25%;
+  right: 25%;
+  font-size: 2rem;
+  font-style: normal;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@keyframes color {
+  0%, 100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #A8EFFF, 0 0 80px #A8EFFF, 0 0 90px #A8EFFF, 0 0 100px #A8EFFF, 0 0 150px #A8EFFF;
+  }
+  50% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #999, 0 0 80px #999, 0 0 90px #999, 0 0 100px #999, 0 0 150px #999;
+  }
 }
