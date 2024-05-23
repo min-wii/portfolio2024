@@ -16,7 +16,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   height: 10vh;
 }
 header .title {
@@ -26,6 +25,8 @@ header .title {
 }
 
 main {
+  width: 100%;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,9 +34,9 @@ main {
   height: auto;
 }
 main .container {
-  border: 1px solid blue;
   position: relative;
   width: 80%;
+  min-width: 120rem;
   height: auto;
   min-height: 130rem;
 }
@@ -46,6 +47,7 @@ main .container .overlay {
   position: absolute;
   inset: 0 0;
   width: 100%;
+  min-width: inherit;
   height: 100%;
   background: url("/assets/img/plastic-bag-texture.jpg");
   opacity: 0.7;
@@ -54,14 +56,15 @@ main .container .overlay {
 }
 main .container .vcf {
   position: absolute;
-  top: 5%;
+  top: 50%;
   left: 50%;
-  transform: translate(-40%, 0);
+  transform: translate(-50%, -50%);
+  margin: -44rem 8rem;
   width: 35.86%;
   min-width: 55rem;
   max-width: 60rem;
   height: auto;
-  min-height: 20rem;
+  min-height: 21rem;
   max-height: 30rem;
   color: #111;
   background: #fff;
@@ -72,10 +75,8 @@ main .container .vcf {
   transition: all 0.5s linear;
 }
 main .container .vcf:active {
-  border: 1px solid red;
-  top: 50%;
-  left: 50%;
-  transform: scale(1.5) translate(-30%, -80%);
+  margin: auto;
+  transform: scale(1.5) translate(-25%, -50%);
 }
 main .container .vcf .vcf__inner {
   width: 100%;
@@ -172,7 +173,8 @@ main .container .ticket {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-168%, -60%);
+  transform: translate(-50%, -50%);
+  margin: -6rem -29rem;
   width: 18.22%;
   min-width: 28rem;
   max-width: 33rem;
@@ -186,9 +188,8 @@ main .container .ticket {
   cursor: pointer;
 }
 main .container .ticket:active {
-  top: 50%;
-  left: 50%;
-  transform: scaleX(1.8) scaleY(1.5) rotate(90deg) translate(-80%, 20%);
+  margin: 0 auto;
+  transform: scale(1.5) rotate(90deg) translate(-100%, 10%);
   z-index: 10;
 }
 main .container .ticket .ticket__top {
@@ -315,7 +316,8 @@ main .container .work {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-33%, -43%);
+  transform: translate(-50%, -50%);
+  margin: 5rem 15rem;
   width: 39.06%;
   min-width: 60rem;
   max-width: 65rem;
@@ -332,9 +334,8 @@ main .container .work {
   transition: all 0.5s linear;
 }
 main .container .work:active {
-  top: 50%;
-  left: 50%;
-  transform: scale(1.5) translate(-25%, -35%);
+  margin: 0 auto;
+  transform: scale(1.5) translate(-30%, -40%);
   z-index: 10;
 }
 main .container .work .work__inner {
@@ -370,7 +371,7 @@ main .container .work .work__inner .work__list > li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 70%;
+  width: 75%;
   gap: 3rem;
   padding: 1rem 0;
   border-top: 5px double #777;
@@ -414,9 +415,9 @@ main .container .work .work__inner .work__list > li .period .period__desc {
 }
 main .container .skill {
   position: absolute;
-  bottom: 10%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
   width: 48.05%;
   min-width: 72rem;
   max-width: 75rem;
@@ -430,9 +431,8 @@ main .container .skill {
   transition: all 0.5s linear;
 }
 main .container .skill:active {
-  top: 50%;
-  left: 50%;
-  transform: scale(1.5) translate(-25%, -35%);
+  margin: 0 auto;
+  transform: scale(1.5) translate(-25%, -50%);
   z-index: 10;
 }
 main .container .skill:active .skill__inner .skill__main ul li::before {
@@ -571,4 +571,8 @@ main .container .skill .skill__inner .skill__main .title span {
   50% {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #999, 0 0 80px #999, 0 0 90px #999, 0 0 100px #999, 0 0 150px #999;
   }
+}
+.scaled {
+  transform: translate(-50%, -50%) scale(1.5);
+  margin: 0;
 }
